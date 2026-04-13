@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:traveller/traveller.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(Traveller());
 }
 
 class MyApp extends StatelessWidget {
