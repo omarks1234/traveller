@@ -5,7 +5,7 @@ import 'package:traveller/core/resources/routes_manager/routes.dart';
 import '../../../features/register_screen.dart';
 
 abstract class RouteManager {
-  static Route<dynamic> generateRoute (RouteSettings settings){
+  static Route<dynamic>? generateRoute (RouteSettings settings){
     switch(settings.name){
       case RoutesName.regiserScreen : return MaterialPageRoute(builder: (context) => RegisterScreen());
     }
