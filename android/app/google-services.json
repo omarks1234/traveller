@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "491208091849",
+    "project_id": "traveller-2026",
+    "storage_bucket": "traveller-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491208091849:android:53b6343d6e3f746ca44518",
+        "android_client_info": {
+          "package_name": "com.traveller.flutter.omar.traveller"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlNGj0VPfg1EDwu3WRpMJ51TWs-pAaHqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
