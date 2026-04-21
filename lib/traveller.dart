@@ -22,6 +22,7 @@ class Traveller extends StatelessWidget {
           themeMode: ThemeMode.light,
           onGenerateRoute: RouteManager.generateRoute,
           initialRoute: RoutesName.regiserScreen,
+          debugShowCheckedModeBanner: false,
         );
       },
 
