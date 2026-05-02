@@ -3,7 +3,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:traveller/core/resources/routes_manager/routes.dart';
 import 'package:traveller/features/register/presentation/widgets/input.dart';
 
-class RegisterScreen extends StatelessWidget {
+import '../../../../core/resources/helper_functions/validation.dart';
+
+class RegisterScreen extends StatefulWidget {
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+
+class _RegisterScreenState extends State<RegisterScreen> {
+   String selectedGender = "male" ;
+  late TextEditingController nameController ;
+  late TextEditingController birthController ;
+  @override
+  void initState() {
+     nameController = TextEditingController();
+      birthController =  TextEditingController() ;
+  }
+  void dispose(){
+    nameController.dispose();
+    birthController.dispose();
+  }
+
+  GlobalKey<FormState> key = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
      return Scaffold(
@@ -11,32 +33,62 @@ class RegisterScreen extends StatelessWidget {
          title: Text("Travelller"),
        ),
        body: SingleChildScrollView(
-         child: Column(
-           children: [
-             SizedBox(height: 12.h,),
-             Input(title: "name",),
-             Input(title: "age ",),
-             Input(title: "Birth date",),
-             Input(title: "gender",),
-             SizedBox(height :30 ) ,
-             Padding(
-               padding:  EdgeInsets.all(30.sp),
-               child: Row(
-                 mainAxisAlignment: MainAxisAlignment.end,
-                 children: [
-                   InkWell(
-                        onTap: (){
-                          Navigator.pushNamed(context, RoutesName.registerScreenLog);
-                        },
-                       child: Icon(Icons.keyboard_arrow_right_outlined , size: 50,)),
-                 ],
+         child: Form(
+           key: key,
+           child: Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+               SizedBox(height: 12.h,),
+               Input("name", validation : Validation.nameValidator),
+               Input( "age " , validation :Validation.ageValidator ),
+               Input( "Birth date",icon:  Icon(Icons.calendar_month_sharp ,size: 20, ) , controller: birthController,validation: Validation.birthValidator,),
+               Padding(
+                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                 child: Text("gender" ),
                ),
-             )
-           ],
+               SizedBox(height: 6.h,),
+               Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: DropdownButtonFormField(
+                   value: selectedGender,
+                   validator: Validation.genderValidator,
+                   decoration: InputDecoration(
+                     border: OutlineInputBorder(
+                       borderRadius: BorderRadius.circular(20.r),
+                     )
+                   ),
+                   items: ["male","female"].map((gender)=>DropdownMenuItem(
+                     value: gender,
+                     child: Text(gender),
+                   )).toList(),
+                   onChanged: (value) {
+                     setState(() {
+                       selectedGender = value!;
+                     });
+                   },
+                 ),
+               ),
+               SizedBox(height :30 ) ,
+               Padding(
+                 padding:  EdgeInsets.all(30.sp),
+                 child: Row(
+                   mainAxisAlignment: MainAxisAlignment.end,
+                   children: [
+                     InkWell(
+                          onTap: (){
+                           if (key.currentState!.validate()){
+                             Navigator.pushNamed(context, RoutesName.registerScreenLog);
+                           }
+                          },
+                         child: Icon(Icons.keyboard_arrow_right_outlined , size: 50,)),
+                   ],
+                 ),
+               )
+             ],
+           ),
          ),
        ),
 
      );
   }
-
 }
