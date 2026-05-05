@@ -4,12 +4,14 @@ import 'package:traveller/core/resources/routes_manager/routes.dart';
 import 'package:traveller/features/register/presentation/pages/registerScreenLog.dart';
 
 import '../../../features/register/presentation/pages/register_screen.dart';
+import '../../../home/home_screen.dart';
 
 abstract class RouteManager {
   static Route<dynamic>? generateRoute (RouteSettings settings){
     switch(settings.name){
       case RoutesName.regiserScreen : return MaterialPageRoute(builder: (context) => RegisterScreen());
       case RoutesName.registerScreenLog: return MaterialPageRoute(builder: (context) => RegisterScreenLog(),);
+      case RoutesName.homeScreen: return MaterialPageRoute(builder: (context) => HomeScreen(),);
 
     }
   }
