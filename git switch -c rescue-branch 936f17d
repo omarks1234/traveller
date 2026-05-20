@@ -1,0 +1,31 @@
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{0}: checkout: moving from master to register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{1}: checkout: moving from register_feature to master
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{2}: checkout: moving from register_feature to register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{3}: branch: Reset to origin/register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{4}: checkout: moving from register_feature to register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{5}: branch: Reset to origin/register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{6}: checkout: moving from register_feature to register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{7}: branch: Reset to origin/register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{8}: checkout: moving from master to register_feature
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{9}: merge refs/heads/register_feature: Fast-forward
+[33m077e84b[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{10}: checkout: moving from register_feature to master
+[33m936f17d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mregister_feature[m[33m, [m[1;31morigin/register_feature[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{11}: commit: + finish authentication using Bloc provider
+[33m2cac666[m HEAD@{12}: commit: + finish authentication using Bloc provider
+[33mc252994[m HEAD@{13}: commit: + finish validation of register screen
+[33m2f5da13[m HEAD@{14}: commit: + register screen skeleton
+[33m6571759[m HEAD@{15}: commit: + create user model
+[33mcda2a9f[m[33m ([m[1;31morigin/architecture[m[33m, [m[1;32marchitecture[m[33m)[m HEAD@{16}: merge architecture: Fast-forward
+[33m4314464[m HEAD@{17}: checkout: moving from architecture to register_feature
+[33mcda2a9f[m[33m ([m[1;31morigin/architecture[m[33m, [m[1;32marchitecture[m[33m)[m HEAD@{18}: commit: + Start setup firebase
+[33mbb3a676[m HEAD@{19}: commit: + architecture of theme
+[33m4314464[m HEAD@{20}: checkout: moving from register_feature to architecture
+[33m4314464[m HEAD@{21}: merge architecture: Fast-forward
+[33m0f2601e[m HEAD@{22}: checkout: moving from architecture to register_feature
+[33m4314464[m HEAD@{23}: commit: + architecture
+[33m0f2601e[m HEAD@{24}: checkout: moving from register_feature to architecture
+[33m0f2601e[m HEAD@{25}: commit: + color manager
+[33m2908e2a[m HEAD@{26}: commit: first_branch(register )
+[33m077e84b[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{27}: checkout: moving from master to register_feature
+[33m077e84b[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{28}: checkout: moving from register_feature to master
+[33m077e84b[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{29}: checkout: moving from master to register_feature
+[33m077e84b[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{30}: commit (initial): traveller first commit
