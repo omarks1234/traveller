@@ -42,6 +42,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   firebase_auth: ^6.4.0
   flutter_bloc: ^9.1.1
+  cloud_firestore: ^6.3.0
 
 dev_dependencies:
   # add the generator to your dev_dependencies

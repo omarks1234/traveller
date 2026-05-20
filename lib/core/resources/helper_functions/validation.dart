@@ -49,6 +49,11 @@ class Validation {
       return "Pass should contain at least one symbol";
     }
   }
+  static String? userTypeValidator (String? user){
+    if (user?.isEmpty??true){
+      return "are you traveller or tour-guide ";
+    }
+  }
 
 
 }
