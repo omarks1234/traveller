@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:traveller/features/register/data/models/user.dart';
+import 'package:traveller/models/monument.dart';
 @singleton
 class FireBaseServices {
   Future<String> createEmail(String email , String password)async{
@@ -33,6 +34,26 @@ class FireBaseServices {
    return docRef ;
 
   }
+
+  Future<String>login(String email , String password)async{
+   try{
+     final credential= await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
+     return "Login has been done successfully " ;
+   }on FirebaseAuthException catch (e) {
+     if (e.code == 'user-not-found') {
+       print('No user found for that email.');
+       return "No user found for that email.";
+     } else if (e.code == 'wrong-password') {
+       print('Wrong password provided for that user.');
+       return "Wrong password provided for that user.";
+     }
+     return "" ;
+   }catch(err){
+     // toast message
+     return "There is a problem in internet connection" ;
+   }
+  }
+
   Future<void>saveUserData(TravellerUser user)async{
 
     final docRef = await fireStoreInit(user.userId!);
@@ -40,5 +61,24 @@ class FireBaseServices {
     return  await doc.set(user) ;
 
   }
+
+  static Future<void>modifyUserData( String userId , List<Map<String,dynamic>> monuments)async{
+
+    final docRef = await fireStoreInit(userId);
+    final doc =docRef.doc(userId);
+    return  await doc.update({"favoriteMonuments" : monuments}) ;
+
+  }
+
+  static Future<TravellerUser?>readUserData(String userId )async{
+    final docRef = await fireStoreInit(userId); // docRef is collection
+     final doc = docRef.doc(userId) ;
+     final snapshot = await doc.get();
+     final travellerUser = snapshot.data();
+     return travellerUser ;
+
+  }
+
+
 }
 

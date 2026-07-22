@@ -12,6 +12,12 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../features/login/data/data_sources/imp/loginFirebaseImp.dart' as _i871;
+import '../features/login/data/data_sources/loginDaoInt.dart' as _i708;
+import '../features/login/data/repositories/loginRepoImp.dart' as _i198;
+import '../features/login/domain/repositories/loginRepoInt.dart' as _i473;
+import '../features/login/domain/use_cases/loginUsecase.dart' as _i912;
+import '../features/login/presentation/manager/login_cubit.dart' as _i315;
 import '../features/register/data/data_sources/addUserDao.dart' as _i718;
 import '../features/register/data/data_sources/imp/addUserFirebaseImp.dart'
     as _i707;
@@ -42,17 +48,29 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i496.RegisterDaoInt>(
       () => _i974.RegisterDaoFirebaseImp(gh<_i66.FireBaseServices>()),
     );
+    gh.factory<_i708.LoginDaoInt>(
+      () => _i871.LoginFirebaseImp(gh<_i66.FireBaseServices>()),
+    );
     gh.factory<_i283.AddUserUseCase>(
       () => _i283.AddUserUseCase(gh<_i718.AddUserDao>()),
     );
     gh.factory<_i175.RepoAddUserInt>(
       () => _i828.RepoAddUserImp(gh<_i718.AddUserDao>()),
     );
+    gh.factory<_i473.LoginRepoInt>(
+      () => _i198.LoginRepoImp(gh<_i708.LoginDaoInt>()),
+    );
     gh.factory<_i451.RepoInt>(
       () => _i229.RegisterRepoImp(gh<_i496.RegisterDaoInt>()),
     );
+    gh.factory<_i912.LoginUseCase>(
+      () => _i912.LoginUseCase(gh<_i473.LoginRepoInt>()),
+    );
     gh.factory<_i732.RegisterUseCase>(
       () => _i732.RegisterUseCase(gh<_i451.RepoInt>()),
+    );
+    gh.factory<_i315.LoginCubit>(
+      () => _i315.LoginCubit(gh<_i912.LoginUseCase>()),
     );
     gh.factory<_i493.SignInModelViewCubit>(
       () => _i493.SignInModelViewCubit(

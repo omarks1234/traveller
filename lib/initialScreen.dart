@@ -9,10 +9,10 @@ class InitialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16.sp),
+        padding: EdgeInsets.all(10.sp),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 300.h,),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 80.h),
@@ -27,7 +27,7 @@ class InitialScreen extends StatelessWidget {
                   minimumSize: Size(double.infinity, 80.h),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, RoutesName.regiserScreen);
+                  Navigator.pushNamed(context, RoutesName.loginScreen);
                 },
                 child: Text("Login")),
           ],
