@@ -79,6 +79,11 @@ class FireBaseServices {
 
   }
 
+  static Future<void> signOutUser ()async{
+    await FirebaseAuth.instance.signOut();
+
+  }
+
 
 }
 
