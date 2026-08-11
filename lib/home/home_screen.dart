@@ -35,8 +35,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Traveller"),
+      appBar: AppBar(title: Text("Traveller", ),
       actions: [
+        IconButton(
+          onPressed: ()  {
+            Navigator.pushNamed(context, RoutesName.mapScreen);
+          },
+          icon: Icon(Icons.mode_of_travel),
+        ),
         IconButton(onPressed: () {
           FireBaseServices.signOutUser();
           Navigator.pushNamedAndRemoveUntil(context, RoutesName.initialScreen,(route) => false,);

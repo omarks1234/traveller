@@ -12,6 +12,21 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../core/resources/services/geolocator.dart' as _i51;
+import '../features/currentLocation/data/data_sources/DaoCurrentLocImp.dart'
+    as _i1041;
+import '../features/currentLocation/data/data_sources/DaoInt/DaoIntCurrentLoc.dart'
+    as _i117;
+import '../features/currentLocation/data/repositories/currentLocRepImp.dart'
+    as _i263;
+import '../features/currentLocation/domain/repositories/currentLocationRepo.dart'
+    as _i368;
+import '../features/currentLocation/domain/use_cases/currentLocUseCase.dart'
+    as _i478;
+import '../features/currentLocation/domain/use_cases/openLocationSettingsUseCase.dart'
+    as _i166;
+import '../features/currentLocation/presentation/manager/current_location_cubit.dart'
+    as _i877;
 import '../features/login/data/data_sources/imp/loginFirebaseImp.dart' as _i871;
 import '../features/login/data/data_sources/loginDaoInt.dart' as _i708;
 import '../features/login/data/repositories/loginRepoImp.dart' as _i198;
@@ -41,7 +56,11 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    gh.singleton<_i51.GeolocatorService>(() => _i51.GeolocatorService());
     gh.singleton<_i66.FireBaseServices>(() => _i66.FireBaseServices());
+    gh.factory<_i117.DaoIntCurrentLoc>(
+      () => _i1041.DaoCurrentLocImp(gh<_i51.GeolocatorService>()),
+    );
     gh.factory<_i718.AddUserDao>(
       () => _i707.AddUserFirebaseImp(gh<_i66.FireBaseServices>()),
     );
@@ -60,14 +79,29 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i473.LoginRepoInt>(
       () => _i198.LoginRepoImp(gh<_i708.LoginDaoInt>()),
     );
+    gh.factory<_i368.CurrentLocationRepo>(
+      () => _i263.CurrentLocRepImp(gh<_i117.DaoIntCurrentLoc>()),
+    );
     gh.factory<_i451.RepoInt>(
       () => _i229.RegisterRepoImp(gh<_i496.RegisterDaoInt>()),
+    );
+    gh.factory<_i478.CurrentLocUseCase>(
+      () => _i478.CurrentLocUseCase(gh<_i368.CurrentLocationRepo>()),
+    );
+    gh.factory<_i166.Openlocationsettingsusecase>(
+      () => _i166.Openlocationsettingsusecase(gh<_i368.CurrentLocationRepo>()),
     );
     gh.factory<_i912.LoginUseCase>(
       () => _i912.LoginUseCase(gh<_i473.LoginRepoInt>()),
     );
     gh.factory<_i732.RegisterUseCase>(
       () => _i732.RegisterUseCase(gh<_i451.RepoInt>()),
+    );
+    gh.factory<_i877.CurrentLocationCubit>(
+      () => _i877.CurrentLocationCubit(
+        gh<_i478.CurrentLocUseCase>(),
+        gh<_i166.Openlocationsettingsusecase>(),
+      ),
     );
     gh.factory<_i315.LoginCubit>(
       () => _i315.LoginCubit(gh<_i912.LoginUseCase>()),

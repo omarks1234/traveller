@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:traveller/core/resources/routes_manager/routes.dart';
 import 'package:traveller/features/login/presentation/pages/login.dart';
 import 'package:traveller/features/register/presentation/pages/registerScreenLog.dart';
-import 'package:traveller/home/map.dart';
+import 'package:traveller/features/currentLocation/presentation/pages/map.dart';
 import 'package:traveller/home/widgets/places/cairoPlaces.dart';
 import 'package:traveller/home/widgets/places/giza_placse.dart';
 import 'package:traveller/home/widgets/places/luxorPlaces.dart';

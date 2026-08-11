@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,6 +19,9 @@ class Traveller extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
        return MaterialApp(
+         localizationsDelegates: context.localizationDelegates,
+         supportedLocales: context.supportedLocales,
+          locale:context.locale,
           theme: ThemeManager.lightThemeMode ,
           darkTheme:ThemeManager.darkThemeMode ,
           themeMode: ThemeMode.light,

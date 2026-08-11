@@ -64,4 +64,7 @@
   static const String wikalaOfAlgohary =  "assets/images/wikala of alghory.png" ;
   static const String mosqueSultanHassan =  "assets/images/Mosque- Madrassa Sultan Hassan cairo.png";
   static const String princeMohamedAliPalace  = "assets/images/prince mohamed ali palace.png" ;
+  static const String english  = "assets/images/english.svg" ;
+  static const String chinese  = "assets/images/china.svg" ;
+
   }
