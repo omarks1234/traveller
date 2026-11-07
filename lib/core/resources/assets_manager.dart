@@ -66,5 +66,80 @@
   static const String princeMohamedAliPalace  = "assets/images/prince mohamed ali palace.png" ;
   static const String english  = "assets/images/english.svg" ;
   static const String chinese  = "assets/images/china.svg" ;
+  static const String papaGanog  = "assets/images/baba ganoug.png" ;
+  static const String baklave  = "assets/images/baklava.png" ;
+  static const String bamia  = "assets/images/bamia.png" ;
+  static const String basbosa  = "assets/images/basbosa.png" ;
+  static const String beladiBread  = "assets/images/beladi bread.png" ;
+  static const String besara  = "assets/images/besara.png" ;
+  static const String eggah  = "assets/images/eggah.png" ;
+  static const String fattah  = "assets/images/fattah.png" ;
+  static const String foolBelbed  = "assets/images/fool belbed.png" ;
+  static const String fteerMeshltet  = "assets/images/fteer meshltet.png" ;
+  static const String fulMedams  = "assets/images/ful medams.png" ;
+  static const String golash  = "assets/images/golash.png" ;
+  static const String grilledChicken  = "assets/images/grilled chicken.png" ;
+  static const String hamamMahshi  = "assets/images/hamam mahshi.png" ;
+  static const String hwawshi  = "assets/images/hwawshi.png" ;
+  static const String kabab  = "assets/images/kabab.png" ;
+  static const String kahk  = "assets/images/kahk.png" ;
+  static const String karkadeeh  = "assets/images/karkadeeh.png" ;
+  static const String kebdaIskandrani  = "assets/images/kebda iskandrani.png" ;
+  static const String kofta  = "assets/images/kofta.png" ;
+  static const String kunafa  = "assets/images/kunafa.png" ;
+  static const String macaroniBshamel  = "assets/images/macaroni bshamel.png" ;
+  static const String mahashi  = "assets/images/mahashi.png" ;
+  static const String molokhia  = "assets/images/molokhia.png" ;
+  static const String molokhiaWithRabbit  = "assets/images/molokhia with rabbit.png" ;
+  static const String omAli  = "assets/images/om ali.png" ;
+  static const String qatayef  = "assets/images/qatayef.png" ;
+  static const String qolqas  = "assets/images/qolqas.png" ;
+  static const String riceWithVermicelli  = "assets/images/Rice with Vermicelli.png" ;
+  static const String rozBlbn  = "assets/images/roz blbn.png" ;
+  static const String rozMemar  = "assets/images/roz memar.png" ;
+  static const String sahlab  = "assets/images/sahlab.png" ;
+  static const String shawrma  = "assets/images/shawrma.png" ;
+  static const String taameya  = "assets/images/taameya.png" ;
+  static const String tahiniSalad  = "assets/images/tahini salad.png" ;
+  static const String torshi  = "assets/images/torshi.png" ;
+  static const String sayadeya  = "assets/images/sayadeya.png" ;
+  static const String shakshuka  = "assets/images/shakshuka.png" ;
+  static const String chickenFattah  = "assets/images/chicken fattah.png" ;
+  static const String egyptianSalad  = "assets/images/Egyptian salad.png" ;
+  static const String egyptianTea  = "assets/images/egyptian tea.png" ;
+  static const String babaGanog  = "assets/images/baba ganoug.png" ;
+  static const String tahini  = "assets/images/tahini salad.png" ;
+  static const String kasb  = "assets/images/kasb.png" ;
+  static const String coffe  = "assets/images/coffe.png" ;
+  static const String bus  = "assets/images/bus.png" ;
+  static const String train  = "assets/images/train.png" ;
+  static const String metro  = "assets/images/metro.png" ;
+  static const String motorCycle  = "assets/images/motor cycle.png" ;
+  static const String car  = "assets/images/car.png" ;
+  static const String bike  = "assets/images/bike.png" ;
+  static const String walking  = "assets/images/walking.png" ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   }

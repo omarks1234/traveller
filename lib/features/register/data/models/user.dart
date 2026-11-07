@@ -1,5 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:traveller/models/monument.dart';
+import 'package:traveller/features/chooseExperience/data/models/attraction.dart';
+
+
+import '../../../chooseExperience/data/models/trip.dart';
+import '../../../savePreferences/data/models/userPreferenceModel.dart';
 
 class TravellerUser {
   String? name;
@@ -19,7 +23,11 @@ class TravellerUser {
   String? userId;
 
   String? userType;
-  List<Monument>? favoriteMonuments;
+
+
+  UserPreferenceModel ? userPreferenceModel;
+
+  Trip ? trip;
 
   TravellerUser({
     this.name,
@@ -31,7 +39,8 @@ class TravellerUser {
     this.rePassword,
     this.userId,
     this.userType,
-    this.favoriteMonuments
+    this.trip,
+    this.userPreferenceModel
   });
 
   Map<String, dynamic> toJson() {
@@ -44,7 +53,12 @@ class TravellerUser {
       "rePassword": rePassword,
       "id": userId,
       "userType": userType,
-      "favoriteMonuments": favoriteMonuments
+      "trip": trip != null ? {
+        "attractivePlaces": trip!.attractivePlaces?.map((e) => e).toList(),
+        "foods": trip!.foods?.map((e) => e).toList(),
+        "transportation": trip!.transportation?.map((e) => e).toList(),
+      } : null,
+      "userPreferenceModel": userPreferenceModel?.userPreferenceToJson(),
     };
   }
 
@@ -60,8 +74,9 @@ class TravellerUser {
     rePassword = data?["rePassword"];
     userId = data?["id"];
     userType = data?["userType"];
-    favoriteMonuments = (data?["favoriteMonuments"]as List<dynamic>)
-        .map((e) => Monument.fromJson(e))
-        .toList();
+    trip = data?["trip"] != null ? Trip.fromJson(data?["trip"] ) : null;
+    userPreferenceModel = data?["userPreferenceModel"] != null
+        ? UserPreferenceModel.fromJson(data?["userPreferenceModel"])
+        : null;
   }
 }

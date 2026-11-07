@@ -1,5 +1,5 @@
 
-
+/*
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +8,7 @@ import 'package:traveller/core/resources/routes_manager/routes.dart';
 import 'package:traveller/features/register/firebase_services.dart';
 import 'package:traveller/home/widgets/category.dart';
 import 'package:traveller/home/widgets/monument_widget.dart';
-import 'package:traveller/models/monument.dart';
+import 'package:traveller/models/attraction.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         SizedBox(height:10.h),
                         InkWell(
                              onTap: () {
-                               Navigator.pushNamed(context, RoutesName.gizaPlacesScreen);
+
                              },
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.r),
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         SizedBox(height:10.h),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, RoutesName.luxorPlacesScreen);
+
                           },
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(20.r),
@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         SizedBox(height:10.h),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, RoutesName.aswanPlacesScreen);
+
                           },
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(20.r),
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ),
 
-                  FutureBuilder(future: FireBaseServices.readUserData(FirebaseAuth.instance.currentUser!.uid) , builder: (context, snapshot) {
+                FutureBuilder(future: FireBaseServices.readUserData(FirebaseAuth.instance.currentUser!.uid) , builder: (context, snapshot) {
 
                        if (snapshot.connectionState == ConnectionState.waiting){
                          return Center(child: CircularProgressIndicator(),);
@@ -156,8 +156,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
                        }
                        final user = snapshot.data;
-                     List<MonumentWidget>favMon = user!.favoriteMonuments!.map((monument) =>MonumentWidget(monument , isFav: true,) ,).toList() ;
-                        return ListView.separated(itemBuilder: (context, index) => favMon[index] , separatorBuilder:(context, index) => SizedBox(height: 10.h,), itemCount:favMon.length );
+                     //List<MonumentWidget>favMon = user!.favoriteMonuments!.map((monument) =>MonumentWidget(monument , isFav: true,) ,).toList() ;
+                        //return ListView.separated(itemBuilder: (context, index) => favMon[index] , separatorBuilder:(context, index) => SizedBox(height: 10.h,), itemCount:favMon.length );
 
 
                   },),
@@ -169,4 +169,4 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
     );
   }
-}
+}*/

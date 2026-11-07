@@ -26,7 +26,7 @@ class Traveller extends StatelessWidget {
           darkTheme:ThemeManager.darkThemeMode ,
           themeMode: ThemeMode.light,
           onGenerateRoute: RouteManager.generateRoute,
-          initialRoute: FirebaseAuth.instance.currentUser==null?RoutesName.initialScreen:RoutesName.homeScreen,
+          initialRoute: FirebaseAuth.instance.currentUser==null?RoutesName.initialScreen:RoutesName.travellerPreferenceScreen,
           debugShowCheckedModeBanner: false,
         );
       },
