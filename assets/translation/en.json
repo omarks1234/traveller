@@ -1,0 +1,20 @@
+{
+  "Login" : "Login",
+  "Create an account": "Create an account",
+  "name": "name",
+  "age": "age",
+  "Birth date": "Birth date",
+  "gender":"gender",
+  "e-mail": "e-mail",
+  "password": "password",
+  "re-password": "re-password",
+  "Traveller" : "Traveller",
+  "Tour-guide": "Tour-guide",
+  "Log-In" : "Log-In",
+  "Egypt" : "Egypt",
+  "Make your program": "Make your program",
+  "Favorites": "Favorites",
+  "Foods": "Foods",
+  "Religion" : "Religion" ,
+  "Traffic" : "Traffic"
+}

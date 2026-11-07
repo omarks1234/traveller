@@ -1,0 +1,20 @@
+{
+  "Login": "登录",
+  "Create an account": "创建账户",
+  "name": "姓名",
+  "age": "年龄",
+  "Birth date": "出生日期",
+  "gender": "性别",
+  "e-mail": "电子邮箱",
+  "password": "密码",
+  "re-password": "确认密码",
+  "Traveller": "游客",
+  "Tour-guide": "导游",
+  "Log-In": "登录",
+  "Egypt": "埃及",
+  "Make your program": "制定您的行程",
+  "Favorites": "收藏",
+  "Foods": "美食",
+  "Religion": "宗教",
+  "Traffic": "交通"
+}
