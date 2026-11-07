@@ -1,17 +1,26 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:traveller/traveller.dart';
 
 import 'DI/field_injection.dart';
 import 'firebase_options.dart';
+import 'package:firebase_app_check/firebase_app_check.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseAppCheck.instance.activate(
+    androidProvider: AndroidProvider.debug,
+  );
   configureDependencies();
-  runApp(Traveller());
+  runApp(EasyLocalization(
+      path: "assets/translation" ,
+      supportedLocales:  [Locale('en'), Locale('zh')],
+      child: Traveller()));
 }
 
 class MyApp extends StatelessWidget {

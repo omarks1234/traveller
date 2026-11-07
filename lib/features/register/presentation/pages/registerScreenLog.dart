@@ -131,7 +131,7 @@ class _RegisterScreenLogState extends State<RegisterScreenLog> {
                       if (state is SignInModelViewSuccess) {
                         Navigator.pushReplacementNamed(
                           context,
-                          RoutesName.homeScreen,
+                          RoutesName.travellerPreferenceScreen,
                         );
                       }
                     },
